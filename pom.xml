@@ -3,22 +3,34 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
+    <groupId>com.lsy</groupId>
     <artifactId>MySpringCloudDemo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>MySpringCloudDemo</name>
     <description>MySpringCloudDemo</description>
+    <modules>
+        <module>springCloud-persistence</module>
+        <module>springCloud-provider-8001</module>
+    </modules>
 
+    <!--打包方式  pom-->
+    <packaging>pom</packaging>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR5</spring-cloud.version>
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
         <spring-boot.version>2.5.2</spring-boot.version>
-
+        <junit.version>4.12</junit.version>
+        <log4j.version>1.2.17</log4j.version>
+        <lombok.version>1.16.18</lombok.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!--springCloud的依赖-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -26,10 +38,46 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--SpringBoot-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
+                <artifactId>spring-boot-dependencies</artifactId>
                 <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--数据库-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.28</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.10</version>
+            </dependency>
+            <!--SpringBoot 启动器-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>1.3.2</version>
+            </dependency>
+            <!--日志测试~-->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>1.2.3</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
