@@ -1,3 +1,5 @@
+package com.lsy.springCloud.entity;
+
 import java.io.Serializable;
 
 /**
