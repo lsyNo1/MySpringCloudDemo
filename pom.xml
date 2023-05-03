@@ -9,8 +9,9 @@
     <name>MySpringCloudDemo</name>
     <description>MySpringCloudDemo</description>
     <modules>
-        <module>springCloud-persistence</module>
-        <module>springCloud-provider-8001</module>
+        <module>springcloud-persistence</module>
+        <module>springcloud-provider</module>
+        <module>springcloud-consumer</module>
     </modules>
 
     <!--打包方式  pom-->

@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>springCloud-provider</artifactId>
+    <artifactId>springcloud-provider</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -21,7 +21,7 @@
         <!--获取persistence-->
         <dependency>
             <groupId>com.lsy</groupId>
-            <artifactId>springCloud-persistence</artifactId>
+            <artifactId>springcloud-persistence</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

@@ -10,7 +10,7 @@ mybatis:
 
 spring:
   application:
-    name: springcloud-provider-8001
+    name: springcloud-provider
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://localhost:3306/mydb?useUnicode=true&characterEncoding=utf-8
