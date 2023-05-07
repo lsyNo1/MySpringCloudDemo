@@ -17,3 +17,12 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+
+info:
+  app.name: springcloud-eureka-provider
+  company.name: lsy corporation ltd.
