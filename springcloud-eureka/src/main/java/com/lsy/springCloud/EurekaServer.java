@@ -1,4 +1,4 @@
-package com.lsy.springcloud;
+package com.lsy.springCloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
